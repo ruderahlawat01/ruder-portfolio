@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpiceCraft | Restaurant</title>
+  <style>
+    
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff3b0; /* Clean deep dark background */
+  color: #f3f4f6;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background-color: #18181b;
+  border-bottom: 1px solid #27272a;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f97316; /* Bright food orange */
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #d4d4d8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #f97316;
+}
+
+/* Hero Section Layout */
+.rest-hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 32px;
+  min-height: 70vh;
+  perspective: 1000px;
+}
+
+.rest-content {
+  max-width: 500px;
+}
+
+.rest-content h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.rest-content h1 span {
+  color: #f97316; /* Bright food accent */
+}
+
+.rest-content p {
+  color: #a1a1aa;
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* CTA Button */
+.rest-btn {
+  background-color: #f97316;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rest-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.4);
+}
+
+/* 3D Floating Card */
+.floating-card {
+  width: 260px;
+  background: linear-gradient(135deg, #27272a, #18181b);
+  border: 1px solid #3f3f46;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  animation: floatCard 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.floating-card:hover {
+  transform: rotateX(10deg) rotateY(-10deg) scale(1.05);
+  border-color: #f97316;
+}
+
+.food-emoji {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 12px;
+  animation: pulseEmoji 2s ease-in-out infinite;
+}
+
+.floating-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f97316;
+  margin: 0 0 16px 0;
+}
+
+.badge {
+  background-color: #3f3f46;
+  color: #f97316;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+/* Keyframes */
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0px) rotateX(5deg) rotateY(-5deg);
+  }
+  50% {
+    transform: translateY(-15px) rotateX(10deg) rotateY(-10deg);
+  }
+}
+
+@keyframes pulseEmoji {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="logo">SpiceCraft 🍔</a>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with 3D Floating Effect -->
+  <section class="rest-hero">
+    <div class="rest-content">
+      <h1>Delicious Food, <br><span>Delivered Fresh</span></h1>
+      <p>Experience the finest flavors crafted with passion. Taste the magic in every single bite.</p>
+      <a href="#menu" class="rest-btn">Explore Menu</a>
+    </div>
+    
+    <!-- 3D Floating Dish Illustration/Card -->
+    <div class="floating-card">
+      <div class="card-inner">
+        <span class="food-emoji">🍕</span>
+        <h3>Signature Pepperoni</h3>
+        <p class="price">$14.99</p>
+        <span class="badge">Bestseller 🔥</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
